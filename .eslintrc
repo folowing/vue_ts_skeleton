@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "extends": [
+    "eslint-config-airbnb-base",
+    "plugin:vue/essential"
+  ],
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  },
+  "rules": {
+    "vue/script-indent": [
+      "error",
+      2,
+      {
+        "baseIndent": 1
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.vue"
+      ],
+      "rules": {
+        "indent": "off"
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "config/webpack.dev.js"
+      }
+    }
+  }
+}
